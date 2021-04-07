@@ -1,5 +1,5 @@
 # `plugin-react-ssr`
-> plugin-react-ssr是基于mini-next框架进行封装，支持React服务端渲染的模板引擎插件。
+> plugin-react-ssr是基于[mini-next](https://github.com/escfe/mini-next)框架进行封装，支持React服务端渲染的模板引擎插件。
 
 # 特性
 - 支持多应用工程，各个页面构建bundle单独打包
