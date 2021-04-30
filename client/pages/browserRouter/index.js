@@ -1,6 +1,6 @@
 'use strict';
 //引入样式文件
-import './with-react-browserRouter.scss';
+import './index.scss';
 //引入组件
 import React, { Component } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
@@ -62,19 +62,15 @@ class About extends Component {
     }
 }
 
-class APP extends Component {
+export default class APP extends Component {
     render() {
         return (
-            <div>
-                <h1>with-react-router</h1>
-                <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/about" component={About} />
-                    <Route exact path="/about/:msg" component={About} />
-                    <Route component={Home} />
-                </Switch>
-            </div>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/about/:msg" component={About} />
+                <Route component={Home} />
+            </Switch>
         );
     }
 }
-module.exports = APP;

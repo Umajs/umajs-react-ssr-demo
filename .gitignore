@@ -11,4 +11,4 @@ logs/
 yarn-error.log
 yarn.lock
 package-lock.json
-.mini-next/
+.ssr/
