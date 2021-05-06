@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 let APP = initProps => {
     const [count, setCount] = useState(initProps.count || 0);
     return (
-        <div>
+        <div className="demo">
             <div>
-                <span>Coweunt: {count}</span>
+                <span>count: {count}</span>
             </div>
             <button onClick={() => setCount(0)}>Reset</button>
             <button onClick={() => setCount(prevCount => prevCount + 1)}>+</button>

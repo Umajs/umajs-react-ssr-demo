@@ -8,7 +8,7 @@ export default (uma: Uma, options: Options = {}): Koa.Middleware => {
         try{
             await next()
         }catch(e){
-            ctx.reactView('error',{msg:e.stack},{cache:false})
+            return ctx.reactView('error',{msg:e},{cache:false})
         }
     };
 };

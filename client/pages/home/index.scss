@@ -44,9 +44,7 @@ height: 0;
 clear: both;
 visibility: hidden;
 }
-a{
-text-decoration: none;
-}
+
 img{
 display: block;
 }
@@ -57,20 +55,40 @@ outline: none;
 li{
 list-style: none;
 }
-html{
-font-size: 16px;
-/*height: 100%;
-overflow: auto;*/
-}
-body{
+
+html,body,#app{
     height: 100%;
+    width: 100%;
+    font-size: 16px;
     overflow-y: auto;
 }
 *{
     -webkit-tap-highlight-color:transparent;
     -webkit-overflow-scrolling:touch;
 }
-.demo{
-    color: blue;
+.ts-demo{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; /*水平居中*/
+    position: relative;
+    top: 50%; /*偏移*/
+    transform: translateY(-50%);
+    background-image: url('images/Umajs-react-ssr.jpeg');
+    background-size: auto;
+    background-position-y: pxToRem(70px);
+    font-weight: bold;
     font-size: $baseFontSize;
+    li a{
+        color:#03a9f4;
+    }
+    .title,.footer{
+        color: white;
+        font-size: pxToRem(24px);
+    }
+    .footer{
+        text-align: center;
+        a{
+            color: #ffffff !important;
+        }
+    }
 }

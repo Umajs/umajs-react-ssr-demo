@@ -52,7 +52,7 @@ class About extends Component {
     render() {
         console.log(this.props.location);
         return (
-            <div className="demo">
+            <div>
                 我是一个路由跳转后的子页面
                 <br />
                 <div>参数：{JSON.stringify(this.props.location)}</div>
@@ -65,12 +65,14 @@ class About extends Component {
 export default class APP extends Component {
     render() {
         return (
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/about" component={About} />
-                <Route exact path="/about/:msg" component={About} />
-                <Route component={Home} />
-            </Switch>
+            <div className="demo">
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/about" component={About} />
+                    <Route exact path="/about/:msg" component={About} />
+                    <Route component={Home} />
+                </Switch>
+            </div>
         );
     }
 }
