@@ -20,15 +20,19 @@
     "url": "git+https://github.com/Umajs/Uma.git"
   },
   "scripts": {
-    "dev": "ts-node-dev --respawn src/app.ts",
-    "build": "tsc && npx mininext build true",
+    "fix:src": "npx eslint src --fix --ext .ts",
+    "fix:web": "npx eslint web --fix",
+    "start": "ts-node-dev --respawn src/app.ts",
+    "build": "tsc && srejs build",
+    "fix": "npm run fix:src && npm run fix:web",
+    "postinstall": "npm run fix && npm run build",
     "preprod": "npm run build",
     "prod": "node app/app.js --production"
   },
   "dependencies": {
     "@umajs/core": "^1.2.1",
     "@umajs/plugin-logger": "^0.1.1",
-    "@umajs/plugin-react-ssr": "^0.0.8",
+    "@umajs/plugin-react-ssr": "^1.0.1",
     "@umajs/plugin-static": "^1.2.0",
     "@umajs/plugin-views": "^2.0.1-alpha.0",
     "@umajs/router": "^1.2.2",
@@ -40,7 +44,17 @@
   },
   "devDependencies": {
     "@types/koa": "^2.0.48",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-typescript": "^0.14.0",
     "npm-run-all": "^4.1.5",
+    "prettier": "^2.3.0",
     "ts-node": "^8.2.0",
     "ts-node-dev": "^1.0.0-pre.32",
     "typescript": "^3.2.2"

@@ -28,10 +28,10 @@ async(ctx,next)=>{
 }
 ```
 
-- **browserRouter**使用
+- **react-router**使用
 > 在页面组件中使用react-router时，只能在controller中使用，切需要服务端对路由做支持。框架默认集成了BrowserRouter，无需开发者在页面组件中引入
 ```js
-// 页面组件 client/browserRouter/index.js 
+// 页面组件 client/router/index.js 
 export default class APP extends Component {
     render() {
         return (
@@ -46,14 +46,14 @@ export default class APP extends Component {
 }
 
 // 服务端路由 前后端路由规则必须保持一致
-@Path("/browserRouter","/browserRouter/:path")  
+@Path("/router","/router/:path")  
 browserRouter() {
-    return Result.reactView('browserRouter',{say:"hi,I am a ReactView"},{cache:true});
+    return Result.reactView('router',{say:"hi,I am a ReactView"},{cache:true});
 }
 ```
 
 # 部署
-> 在部署生产环境之前，需要提前编译好客户端bundle文件，否则线上首次访问时会耗时比较长，影响用户体验。编译脚本命令为`npx mininext build true`
+> 在部署生产环境之前，需要提前编译好客户端bundle文件，否则线上首次访问时会耗时比较长，影响用户体验。编译脚本命令为`npx srejs build`
 ```
 "scripts": {
     "dev": "ts-node-dev --respawn src/app.ts",

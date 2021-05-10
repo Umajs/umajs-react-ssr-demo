@@ -1,24 +1,24 @@
 import './index.scss';
 import React from 'react';
 type typeProps = {
-    say:string
+    title:string
 }
 export default function (props:typeProps){
-     const {say} = props;
+     const {title} = props;
     return (
         <div className="ts-demo" style={{textAlign: 'center'}}>
             <br/>
             <br/>
-            <p className='title'>{ say }</p>
+            <p className='title'>{title }</p>
             <ul>
-                <li><a href='/browserRouter'>1.搭配react-router</a></li>
-                <li><a href='/useRedux'>2.搭配redux</a></li>
-                <li><a href='/throwError'>3.在koa中间件中使用</a></li>
-                <li><a href='/template'>4.搭配模板引擎</a></li>
-            </ul>
-            <p className='footer'>
-                <a  href="https://github.com/Umajs/plugin-react-ssr">@umasj/plugin-react-ssr(点击查看更多用法)</a>
-            </p>
+                <li><a href='/hooks'>1.使用hooks</a></li>
+                <li><a href='/router'>2.使用react-router</a></li>
+                <li><a href='/redux'>3.使用redux</a></li>
+                <li><a href='/template'>4.SEO使用模板引擎</a></li>
+                <li><a href='/throwError'>5.在koa中间件中使用</a></li></ul>
+        <p className='footer'>
+            <a  href="https://github.com/Umajs/plugin-react-ssr">@umasj/plugin-react-ssr(点击查看更多用法)</a>
+        </p>
             
         </div>
     )

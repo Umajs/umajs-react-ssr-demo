@@ -1,14 +1,15 @@
-'use strict';
-//引入样式文件
+// 引入样式文件
 import './index.scss';
-//引入组件
+// 引入组件
 import React, { Component } from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
+
 class Home extends Component {
     constructor(props) {
         super(props);
         this.goAboutPage = this.goAboutPage.bind(this);
     }
+
     goAboutPage() {
         // this.props.history.push({
         //     pathname: '/about',
@@ -25,12 +26,13 @@ class Home extends Component {
         this.props.history.push({
             pathname: '/about',
             state: {
-                msg: '来自首页的问候！by state'
-            }
+                msg: '来自首页的问候！by state',
+            },
         });
-        //this.props.history.push({ pathname: "/about/'我是url参数'" });
-        //this.props.history.push({ pathname:"/about?msg='我是url参数'"});
+        // this.props.history.push({ pathname: "/about/'我是url参数'" });
+        // this.props.history.push({ pathname:"/about?msg='我是url参数'"});
     }
+
     render() {
         return (
             <div>
@@ -46,11 +48,9 @@ class Home extends Component {
 }
 
 class About extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         console.log(this.props.location);
+
         return (
             <div>
                 我是一个路由跳转后的子页面
@@ -66,6 +66,7 @@ export default class APP extends Component {
     render() {
         return (
             <div className="demo">
+                <div>{this.props.msg}</div>
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/about" component={About} />

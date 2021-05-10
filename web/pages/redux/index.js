@@ -1,5 +1,34 @@
-'use strict';
 import './redux.scss';
-import APP from './page/UseState01';
+import React, { useReducer } from 'react';
+import TimeReducer from './reducer/timeReducer';
+import { resetTime, addTime, fetchTime } from './action/timeAction';
 
-module.exports = APP;
+export default (initProps)=>{
+    const [reduxState, dispatch] = useReducer(TimeReducer, { time: initProps.time });
+
+    return (
+        <div>
+            time: {reduxState.time}
+            <button
+                onClick={async () => {
+                    fetchTime().then((action) => {
+                        dispatch(action);
+                    });
+                }}>
+                get
+            </button>
+            <button
+                onClick={() => {
+                    dispatch(resetTime(0));
+                }}>
+                resetTime
+            </button>
+            <button
+                onClick={() => {
+                    dispatch(addTime());
+                }}>
+                add
+            </button>
+        </div>
+    );
+}

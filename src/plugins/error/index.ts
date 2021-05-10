@@ -3,12 +3,10 @@ import { Uma, IContext } from '@umajs/core';
 
 export type Options = {};
 
-export default (uma: Uma, options: Options = {}): Koa.Middleware => {
-    return async(ctx: IContext, next: Function) => {
-        try{
-            await next()
-        }catch(e){
-            return ctx.reactView('error',{msg:e},{cache:false})
-        }
-    };
+export default (_uma: Uma, _options: Options = {}): Koa.Middleware => async (ctx: IContext, next: Function) => {
+    try {
+        await next();
+    } catch (e) {
+        return ctx.reactView('error', { msg: e }, { cache: false });
+    }
 };

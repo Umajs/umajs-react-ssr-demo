@@ -3,10 +3,14 @@ module.exports = {
     plugins: [
         'typescript',
         '@typescript-eslint',
+        "react",
+        "prettier",
+        "react-hooks"
     ],
     extends: ['airbnb-base'],
     rules: {
         // allow debugger during development
+        "array-callback-return":0,
         'linebreak-style': 0,
         'indent': [2, 4, {
             'SwitchCase': 1
@@ -28,15 +32,16 @@ module.exports = {
         'consistent-return': 0,
         'no-shadow': 0,
         'no-redeclare': 0,
-        'no-unused-vars': 0,
+        'no-unused-vars': 1,
         'no-useless-constructor': 0,
         'no-empty-function': 0,
         'class-methods-use-this': 0,
         'import/no-extraneous-dependencies': 0,
         '@typescript-eslint/no-shadow': 2,
         '@typescript-eslint/no-redeclare': 2,
-        '@typescript-eslint/no-unused-vars': 2,
         '@typescript-eslint/no-useless-constructor': 2,
+        "func-names":0,
+        "max-classes-per-file": 0,
         'no-restricted-syntax': 0,
         'no-param-reassign': 0,
         'no-return-await': 0,
@@ -56,5 +61,8 @@ module.exports = {
             { "blankLine": "always", "prev": "block", "next": "*" },
             { "blankLine": "always", "prev": "function", "next": "*" },
         ],
+        "react/jsx-uses-react": 1,
+        "react/jsx-uses-vars": 1,
+        "react-hooks/rules-of-hooks": "error"
     }
 }
