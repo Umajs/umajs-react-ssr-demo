@@ -11,7 +11,7 @@ import { Result } from '@umajs/plugin-react-ssr'
 export default class Index extends BaseController {
     @Path("/")
     index() {
-        return Result.reactView('home',{say:"hi,I am a ReactView"},{cache:true});
+        return Result.reactView('home',{say:"hi,I am a umajs-react-ssr"},{cache:true});
     }
 }
 ```
@@ -56,8 +56,7 @@ browserRouter() {
 > 在部署生产环境之前，需要提前编译好客户端bundle文件，否则线上首次访问时会耗时比较长，影响用户体验。编译脚本命令为`npx srejs build`
 ```
 "scripts": {
-    "dev": "ts-node-dev --respawn src/app.ts",
-    "build": "tsc && npx mininext build true",
+    "build": "tsc && npx srejs build",
     "prepublish": "npm run build",
     "prod": "node app/app.js --production"
   },
