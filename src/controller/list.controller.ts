@@ -6,6 +6,6 @@ export default class Index extends BaseController {
     index() {
         const ListData = ['itme1', 'itme2', 'itme3', 'itme4', 'itme5', 'itme6', 'itme7', 'itme8'];
 
-        return Result.reactView('list', { title: '列表', ListData }, { cache: true });
+        return Result.reactView('todoList', { title: '列表', ListData }, { cache: false });
     }
 }

@@ -7,6 +7,6 @@ export default (_uma: Uma, _options: Options = {}): Koa.Middleware => async (ctx
     try {
         await next();
     } catch (e) {
-        return ctx.reactView('error', { msg: e }, { cache: false });
+        return ctx.reactView('error', { error: { message: e.message, stack: e.stack } }, { cache: false });
     }
 };

@@ -21,7 +21,7 @@
   },
   "scripts": {
     "fix:src": "npx eslint src --fix --ext .ts",
-    "fix:web": "npx eslint web --fix",
+    "fix:web": "npx eslint web --fix --ext .tsx",
     "start": "ts-node-dev --respawn src/app.ts",
     "build": "tsc && srejs build",
     "fix": "npm run fix:src && npm run fix:web",
@@ -32,7 +32,7 @@
   "dependencies": {
     "@umajs/core": "^1.2.1",
     "@umajs/plugin-logger": "^0.1.1",
-    "@umajs/plugin-react-ssr": "^1.0.1",
+    "@umajs/plugin-react-ssr": "^1.0.3",
     "@umajs/plugin-static": "^1.2.0",
     "@umajs/plugin-views": "^2.0.1-alpha.0",
     "@umajs/router": "^1.2.2",
@@ -44,6 +44,9 @@
   },
   "devDependencies": {
     "@types/koa": "^2.0.48",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.4",
+    "@types/react-router-dom": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "eslint": "^7.26.0",

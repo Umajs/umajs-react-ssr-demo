@@ -1,13 +1,13 @@
-import './redux.scss';
+import '../../common.scss';
 import React, { useReducer } from 'react';
 import TimeReducer from './reducer/timeReducer';
 import { resetTime, addTime, fetchTime } from './action/timeAction';
 
-export default (initProps)=>{
+export default (initProps) => {
     const [reduxState, dispatch] = useReducer(TimeReducer, { time: initProps.time });
 
     return (
-        <div>
+        <div className="demo">
             time: {reduxState.time}
             <button
                 onClick={async () => {
@@ -31,4 +31,4 @@ export default (initProps)=>{
             </button>
         </div>
     );
-}
+};

@@ -3,28 +3,28 @@ module.exports = {
     plugins: [
         'typescript',
         '@typescript-eslint',
-        "react",
-        "prettier",
-        "react-hooks"
+        'react',
+        'prettier',
+        'react-hooks',
     ],
     extends: ['airbnb-base'],
     rules: {
         // allow debugger during development
-        "array-callback-return":0,
+        'array-callback-return': 0,
         'linebreak-style': 0,
-        'indent': [2, 4, {
-            'SwitchCase': 1
+        indent: [2, 4, {
+            SwitchCase: 1,
         }],
-        'max-len': [2, { 'code': 160, 'ignoreUrls': true }],
-        'radix': ['error', 'as-needed'],
+        'max-len': [2, { code: 160, ignoreUrls: true }],
+        radix: ['error', 'as-needed'],
         'object-shorthand': ['error', 'methods'],
-        'no-unused-expressions': ["error", {
-            "allowShortCircuit": true
+        'no-unused-expressions': ['error', {
+            allowShortCircuit: true,
         }],
         'no-bitwise': ['error', {
-            'allow': ['~']
+            allow: ['~'],
         }],
-        "import/extensions": 0,
+        'import/extensions': 0,
         'import/no-unresolved': 0,
         'import/prefer-default-export': 0,
         'import/no-dynamic-require': 0,
@@ -40,8 +40,8 @@ module.exports = {
         '@typescript-eslint/no-shadow': 2,
         '@typescript-eslint/no-redeclare': 2,
         '@typescript-eslint/no-useless-constructor': 2,
-        "func-names":0,
-        "max-classes-per-file": 0,
+        'func-names': 0,
+        'max-classes-per-file': 0,
         'no-restricted-syntax': 0,
         'no-param-reassign': 0,
         'no-return-await': 0,
@@ -51,18 +51,19 @@ module.exports = {
         'no-plusplus': 0,
         'no-debugger': 0,
         'no-console': 0,
-        'no-bitwise': 0,
-        "padding-line-between-statements": [
-            "warn",
-            { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
-            { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] },
-            { "blankLine": "always", "prev": "*", "next": "return" },
-            { "blankLine": "always", "prev": "block-like", "next": "*" },
-            { "blankLine": "always", "prev": "block", "next": "*" },
-            { "blankLine": "always", "prev": "function", "next": "*" },
+        'no-underscore-dangle': 0,
+        'no-restricted-globals': 0,
+        'padding-line-between-statements': [
+            'warn',
+            { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+            { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+            { blankLine: 'always', prev: '*', next: 'return' },
+            { blankLine: 'always', prev: 'block-like', next: '*' },
+            { blankLine: 'always', prev: 'block', next: '*' },
+            { blankLine: 'always', prev: 'function', next: '*' },
         ],
-        "react/jsx-uses-react": 1,
-        "react/jsx-uses-vars": 1,
-        "react-hooks/rules-of-hooks": "error"
-    }
-}
+        'react/jsx-uses-react': 1,
+        'react/jsx-uses-vars': 1,
+        'react-hooks/rules-of-hooks': 'error',
+    },
+};

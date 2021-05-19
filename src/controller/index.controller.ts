@@ -2,11 +2,11 @@ import { BaseController, Path } from '@umajs/core';
 import { Result } from '@umajs/plugin-react-ssr';
 
 export default class Index extends BaseController {
-    @Path('/', '/home')
+    @Path('/', '/index')
     index() {
         return Result.reactView(
-            'home',
-            {title: '例子' },
+            'index',
+            { title: '例子' },
             { cache: true },
         );
     }
@@ -16,14 +16,14 @@ export default class Index extends BaseController {
         throw new Error('this is error');
     }
 
-    @Path('/redux')
+    @Path('/useReducer')
     redux() {
-        return Result.reactView('redux', { time: new Date().getTime() }, { cache: false });
+        return Result.reactView('useReducer', { time: new Date().getTime() }, { cache: false });
     }
 
-    @Path('/hooks')
+    @Path('/useState')
     hooks() {
-        return Result.reactView('hooks', { count: new Date().getTime() }, { cache: false });
+        return Result.reactView('useState', { count: new Date().getTime() }, { cache: false });
     }
 
     @Path('/router', '/router/:path')
@@ -31,14 +31,14 @@ export default class Index extends BaseController {
         return Result.reactView('router', { msg: 'react-router' }, { cache: true });
     }
 
-    @Path('/seo')
+    @Path('/useTemplate')
     koaview() {
         return Result.reactView(
-            'seo',
+            'useTemplate',
             {
-                msg: 'This is the seo text！',
+                msg: 'This is the useTemplate text！',
                 title: 'hi,umajs-react-ssr',
-                info: 'This is the seo demo!',
+                info: 'This is the useTemplate demo!',
             },
             { cache: true },
         );
