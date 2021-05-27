@@ -2,6 +2,9 @@
 > `Umajs-react-ssr`是由[Umajs](https://github.com/Umajs/Umajs) 搭配[Srejs](https://github.com/dazjean/Srejs)构建的轻量级，使用简单，灵活的`React`服务端渲染解决方案;支持ssr和csr两种模式自由切换。
 
 ```shell
+npm i @umajs/cli -g  // 安装cli工具
+uma project yourproject  //通过uma初始化工程，选择react模板工程
+cd yourproject
 yarn install
 yarn start
 
