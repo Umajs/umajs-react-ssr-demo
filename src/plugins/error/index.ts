@@ -1,12 +1,22 @@
-import * as Koa from 'koa';
-import { Uma, IContext } from '@umajs/core';
+import { IContext } from '@umajs/core';
 
 export type Options = {};
 
-export default (_uma: Uma, _options: Options = {}): Koa.Middleware => async (ctx: IContext, next: Function) => {
+export default async () => async (ctx: IContext, next: Function) => {
     try {
         await next();
     } catch (e) {
-        return ctx.reactView('error', { error: { message: e.message, stack: e.stack } }, { cache: false });
+        return ctx.react('error', { error: { message: e.message } }, { cache: false });
+    }
+
+    const { status } = ctx.response;
+
+    switch (status) {
+        case 404:
+            ctx.react('error', { error: { message: '没有找到此页面' } }, { cache: true });
+            break;
+        // etc
+        default:
+            break;
     }
 };
