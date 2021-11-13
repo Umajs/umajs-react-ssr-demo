@@ -15,7 +15,7 @@ export default function (props:TypeProps) {
                 <li><a href='/useTemplate'>4.SEO使用模板引擎</a></li>
                 <li><a href='/throwError'>5.在koa中间件中使用</a></li></ul>
             <p className='footer'>
-                <a href="https://github.com/Umajs/plugin-react-ssr">@umasj/plugin-react-ssr(点击查看更多用法)</a>
+                <a href="https://github.com/Umajs/plugin-react-ssr">@umajs/plugin-react-ssr(点击查看更多用法)</a>
             </p>
         </div>
     );
