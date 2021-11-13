@@ -1,10 +1,8 @@
-import '../../common.scss';
 import React from 'react';
+import '../../common.scss';
+import { TypeProps } from '@/@types/index';
 
-type typeProps = {
-    title:string
-}
-export default function (props:typeProps) {
+export default function (props:TypeProps) {
     const { title } = props;
 
     return (

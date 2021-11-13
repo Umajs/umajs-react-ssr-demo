@@ -30,12 +30,12 @@
     "prod": "node app/app.js --production"
   },
   "dependencies": {
-    "@umajs/core": "^1.2.1",
+    "@umajs/core": "^2.0.1",
     "@umajs/plugin-logger": "^0.1.1",
-    "@umajs/plugin-react-ssr": "^2.0.0-alpha.0",
-    "@umajs/plugin-static": "^1.2.0",
-    "@umajs/plugin-views": "^2.0.1-alpha.0",
-    "@umajs/router": "^1.2.2",
+    "@umajs/plugin-react-ssr": "^2.0.0",
+    "@umajs/plugin-static": "^2.0.1",
+    "@umajs/plugin-views": "^2.0.1",
+    "@umajs/router": "^2.0.1",
     "koa": "^2.11.0",
     "nunjucks": "^3.2.3",
     "react": "^17.0.2",
